@@ -102,9 +102,10 @@ export function Shiba() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 background-change-container" style={{ backgroundColor }}>
     {/* Left Section (Column 1) */}
-    <div className="hidden md:flex md:flex-1 p-4 pt-28 font-lemon-milk text-center md:text-left">
+    <div className="hidden md:grid p-4 pt-28 font-lemon-milk">
       <h1 className="text-3xl font-lemon-milk-bold">{characters[currentCharacter].name}</h1>
-      <h2 className="text-xl pt-8 md:pt-36">{characters[currentCharacter].info}</h2>
+      <p className="text-xl md:pt-3">{characters[currentCharacter].info}</p>
+     
     </div>
 
       {/* Center Section (Column 2) */}
@@ -140,7 +141,7 @@ export function Shiba() {
       </div>
 
       {/* More Info Button for Mobile */}
-      <div className="block md:hidden text-center">
+      <div className="block md:hidden">
         <button className="text-xl bg-blue-500 text-white px-4 py-2 rounded" onClick={handleMoreInfoClick}>
           More Info
         </button>

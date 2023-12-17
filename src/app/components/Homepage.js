@@ -20,7 +20,7 @@ function Homepage() {
         <div className='bg-slate-700 h-[780px]'>
            <Shiba />
         </div>
-        <div className='h-auto pt-8' >
+        <div className='h-[780px] bg-slate-500 pt-12' >
             <GameInfo/>
         </div>
         <div className='pt-2 '>
