@@ -32,7 +32,7 @@ function GameInfo() {
   }, [currentImageIndex]);
 
   return (
-    <div className='bg-slate-500 font-lemon-milk pt-8 text-white'>
+    <div className='bg-gray-200 font-lemon-milk pt-8 text-black'>
       <div className='grid md:grid-cols-2 gap-12 border-1 rounded-md border-inherit pt-14'>
         <div className='p-4'>
           <h1 className='text-center md:text-left'>

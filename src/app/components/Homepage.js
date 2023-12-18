@@ -17,10 +17,10 @@ function Homepage() {
         <div className='h-auto ' >
             <GameSection/>
         </div>
-        <div className='bg-slate-700 h-[780px]'>
+        <div className='h-[780px]'>
            <Shiba />
         </div>
-        <div className='h-[780px] bg-slate-500 pt-12' >
+        <div className='h-[780px]  pt-12' >
             <GameInfo/>
         </div>
         <div className='pt-2 '>

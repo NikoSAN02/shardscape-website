@@ -139,7 +139,7 @@ export function Shiba() {
 
        {/* Right Section (Column 3) */}
        <div className="hidden  md:grid md:grid-flow-row p-4 ">
-        <div className="font-lemon-milk-bold text-center pt-36 md:text-left">
+        <div className="font-lemon-milk-bold text-left pt-36 md:text-left">
           <h2 className="text-2xl pt-20">Character Info</h2>
         </div>
         <div>
