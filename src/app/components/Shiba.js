@@ -102,16 +102,19 @@ export function Shiba() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 background-change-container" style={{ backgroundColor }}>
     {/* Left Section (Column 1) */}
-    <div className="hidden md:grid p-4 pt-28 font-lemon-milk">
-      <h1 className="text-3xl font-lemon-milk-bold">{characters[currentCharacter].name}</h1>
-      <p className="text-xl md:pt-3">{characters[currentCharacter].info}</p>
-     
+    <div className="hidden md:grid pt-28 font-lemon-milk">
+      <div className=" text-right">
+        <h1 className="text-3xl font-lemon-milk-bold pt-32">{characters[currentCharacter].name}</h1>
+      </div>
+      <div className="flex text-right">
+        <p className="text-xl md:pt-1">{characters[currentCharacter].info}</p>
+      </div>
     </div>
 
       {/* Center Section (Column 2) */}
       <div className="flex-1 p-4 relative text-center md:text-left">
         <>
-          <div className="md:h-[720px] h-[620px] cursor-pointer">
+          <div className="md:h-[720px] h-[620px] md:w-[380px] cursor-pointer border-2 border-black	">
             <Canvas className="h-3xl w-3xl mx-auto" camera={<PerspectiveCamera makeDefault position={[0, 0, 10]} zoom={1} />}>
               <OrbitControls enableZoom={false} />
               <ambientLight />
@@ -135,8 +138,38 @@ export function Shiba() {
       </div>
 
        {/* Right Section (Column 3) */}
-       <div className="hidden md:flex md:flex-1 p-4 font-lemon-milk-bold text-center md:text-left">
-        <h2 className="text-2xl pt-16">Character Info</h2>
+       <div className="hidden  md:grid md:grid-flow-row p-4 ">
+        <div className="font-lemon-milk-bold text-center pt-36 md:text-left">
+          <h2 className="text-2xl pt-20">Character Info</h2>
+        </div>
+        <div>
+        <div class="flex items-center font-lemon-milk justify-between border-t border-b border-dotted border-black py-1">
+          <div class="flex-1 text-center">
+            <h3>Height</h3>
+            <h3>6' 2"</h3>
+          </div>
+          <div class="border-l border-dotted border-black h-10"></div>
+          <div class="flex-1 text-center">
+            <h3>Weight</h3>
+            <h3>185 lbs</h3>
+          </div>
+        </div>
+        <div class="flex items-center font-lemon-milk justify-between border-b border-dotted border-black py-1">
+          <div class="flex-1 text-center">
+            <h3>Age</h3>
+            <h3>24</h3>
+          </div>
+          <div class="border-l border-dotted border-black h-8"></div>
+          <div class="flex-1 text-center">
+            <h3>Special Ability</h3>
+            <h3>?????</h3>
+          </div>
+        </div>
+        </div>
+        <div className="">
+
+        </div>
+
         {/* Additional information for larger screens */}
       </div>
 
