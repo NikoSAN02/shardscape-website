@@ -54,12 +54,12 @@ function GameInfo() {
             {/* Use the handlePrevImage and handleNextImage functions for button clicks */}
             <VscArrowCircleLeft
               size={60}
-              className="absolute left-1/3 -translate-x-1/2 text-lg rounded-full p-2 text-white cursor-pointer"
+              className="absolute left-1/3 -translate-x-1/2 text-lg rounded-full p-2 text-orange-400 cursor-pointer"
               onClick={handlePrevImage}
             />
             <VscArrowCircleRight
               size={60}
-              className="absolute left-1/3 translate-x-1/2 text-lg rounded-full p-2 text-white cursor-pointer"
+              className="absolute left-1/3 translate-x-1/2 text-lg rounded-full p-2 text-purple-800 cursor-pointer"
               onClick={handleNextImage}
             />
           </div>
