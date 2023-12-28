@@ -5,7 +5,7 @@ import { VscArrowCircleLeft, VscArrowCircleRight } from 'react-icons/vsc';
 
 function GameInfo() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/images/guns/1.png", "/images/guns/2.png", "/images/guns/3.png", "/images/guns/4.png"]; // Add more image paths as needed
+  const images = ["/images/guns/1.png", "/images/guns/2.png", "/images/guns/3.png"]; // Add more image paths as needed
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -35,8 +35,11 @@ function GameInfo() {
     <div className='bg-gray-200 font-lemon-milk pt-8 text-black'>
       <div className='grid md:grid-cols-2 gap-12 border-1 rounded-md border-inherit pt-14'>
         <div className='p-4'>
-          <h1 className='text-center md:text-left'>
-           GUNS and ROSES
+          <h1 className='text-center text-3xl md:text-left'>
+           Weapons & Equipments
+          </h1>
+          <h1 className='text-center text-3xl md:text-right'>
+           AR-15
           </h1>
         </div>
 
@@ -46,7 +49,7 @@ function GameInfo() {
           <Image
             src={images[currentImageIndex]}
             width={500}
-            height={500}
+            height={200}
             alt="Game Screenshot"
           />
           </div>

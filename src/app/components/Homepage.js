@@ -11,13 +11,13 @@ function Homepage() {
    
   return (
     <main>
-       <div className="bg-gray-800 w-full h-20">
+       <div className="bg-slate-300 w-full h-20">
         <Header />
         </div>
         <div className='h-auto ' >
             <GameSection/>
         </div>
-        <div className='h-[780px]'>
+        <div className='h-auto'>
            <Shiba />
         </div>
         <div className='h-[780px]  pt-12' >

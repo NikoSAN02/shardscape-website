@@ -100,7 +100,7 @@ export function Shiba() {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 background-change-container" style={{ backgroundColor }}>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-200	 background-change-container">
     {/* Left Section (Column 1) */}
     <div className="hidden md:grid pt-28 font-lemon-milk">
       <div className="text-right">
@@ -108,46 +108,48 @@ export function Shiba() {
           {characters[currentCharacter].name}
         </h1>
       </div>
-      <div className="flex items-center font-lemon-milk justify-between border-b-2 border-dashed border-red-500 py-1">
-        <div className="flex text-right w-full">
-          <p className="text-xl md:pt-1">{characters[currentCharacter].info}</p>
+      <div className="flex items-center font-lemon-milk justify-between py-1">
+        <div className="flex text-right md:mb-36">
+          <p className="text-xl md:mt-1 md:ml-20">{characters[currentCharacter].info}</p>
         </div>
-        <div className="w-1 h-full bg-red-500 ml-4"></div>
       </div>
     </div>
 
       {/* Center Section (Column 2) */}
-      <div className="flex-1 p-4 relative text-center md:text-left">
-        <>
-          <div className="md:h-[720px] h-[620px] md:w-[380px] cursor-pointer 	">
-            <Canvas className="h-3xl w-3xl mx-auto" camera={<PerspectiveCamera makeDefault position={[0, 0, 10]} zoom={1} />}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight />
-              <pointLight position={[10, 10, 10]} />
-              <MeshComponent characterIndex={currentCharacter} />
-            </Canvas>
-          </div>
-          <div className="h-8 gap-4">
-            <VscArrowCircleLeft
-              size={60}
-              className="absolute left-1/2 -translate-x-1/2 text-lg rounded-full p-2 text-white cursor-pointer"
-              onClick={handlePrevCharacter}
-            />
-            <VscArrowCircleRight
-              size={60}
-              className="absolute left-1/2 translate-x-1/2 text-lg rounded-full p-2 text-white cursor-pointer"
-              onClick={handleNextCharacter}
-            />
-          </div>
-        </>
+      <div className="flex-1 p-4 relative text-center md:text-left border-black">
+  <>
+    <div className="flex items-center justify-center">
+      <div className="md:h-[670px] h-[500px] md:w-[320px] w-[280px] cursor-pointer">
+        <Canvas className="h-full w-full" camera={<PerspectiveCamera makeDefault position={[0, 0, 10]} zoom={1} />}>
+          <OrbitControls enableZoom={false} />
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <MeshComponent characterIndex={currentCharacter} />
+        </Canvas>
       </div>
+    </div>
+    <div className="absolute inset-x-0 bottom-4 flex justify-center gap-4">
+      <VscArrowCircleLeft
+        size={60}
+        className="text-lg rounded-full p-2 text-black cursor-pointer"
+        onClick={handlePrevCharacter}
+      />
+      <VscArrowCircleRight
+        size={60}
+        className="text-lg rounded-full p-2 text-black cursor-pointer"
+        onClick={handleNextCharacter}
+      />
+    </div>
+  </>
+</div>
+
 
        {/* Right Section (Column 3) */}
        <div className="hidden  md:grid md:grid-flow-row p-4 ">
         <div className="font-lemon-milk-bold text-left pt-36 md:text-left">
-          <h2 className="text-2xl pt-20">Character Info</h2>
+          <h2 className="text-3xl pt-20">Character Info</h2>
         </div>
-        <div>
+        <div className="md:mb-14 md:mr-10">
         <div className="flex items-center font-lemon-milk justify-between border-t border-b-2 border-dashed border-black py-1">
           <div className="flex-1 text-center">
             <h3>Height</h3>
