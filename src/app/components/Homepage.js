@@ -5,6 +5,7 @@ import GameSection from './GameSection';
 import GameInfo from './GameInfo';
 import Image from 'next/image';
 import Header from "./Header";
+import SUpportedChains from './SupportedChains';
 
 
 function Homepage() {
@@ -19,6 +20,9 @@ function Homepage() {
         </div>
         <div className='h-auto'>
            <Shiba />
+        </div>
+        <div className='pt-2 '>
+             <SUpportedChains />
         </div>
         <div className='h-[780px]  pt-12' >
             <GameInfo/>

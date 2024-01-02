@@ -107,3 +107,31 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.6); /* Lighter shade of black for the border */
+  background-color: transparent; /* Keep the inside of the circle transparent */
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  transition: background-color 0.02s, transform 0.02s, width 0.02s, height 0.02s; /* Smooth transition for color and size changes */
+}
+
+/* Cursor effect when hovering over buttons */
+.custom-cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  cursor: none;
+}
+
+/* Hide the default cursor for all interactive elements */
+a, button, input, textarea, select, Canvas, VscArrowCircleLeft, VscArrowCircleRight {
+  cursor: none !important;
+}

@@ -6,6 +6,11 @@ import { VscArrowCircleLeft, VscArrowCircleRight } from 'react-icons/vsc';
 function GameInfo() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = ["/images/guns/1.png", "/images/guns/2.png", "/images/guns/3.png"]; // Add more image paths as needed
+  const descriptions = [
+    "The AR-15, a versatile and powerful assault rifle, is known for its accuracy and adaptability on the battlefield.",
+    "The 12-gauge shotgun, a close-quarters powerhouse, delivers devastating firepower at short range.",
+    "The 9mm pistol, a classic sidearm, offers reliability and precision for tactical versatility."
+  ];
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -38,13 +43,16 @@ function GameInfo() {
           <h1 className='text-center text-3xl md:text-left'>
            Weapons & Equipments
           </h1>
-          <h1 className='text-center text-3xl md:text-right'>
+          <h1 className='text-center text-3xl md:text-left md:mt-16 md:ml-9'>
            AR-15
           </h1>
+          <h1 className="text-left mt-10 ml-9 w-[380px]">{descriptions[currentImageIndex]}</h1>
+          
         </div>
+        
 
-        <div className='md:mt-0 mt-6 relative'>
-        <div className='md:h-[500px] md:w-[500px] h-[400px] w-[400px]'>
+        <div className='md:mt-6 mt-6 relative'>
+        <div className='md:h-[250px] md:w-[500px] h-[200px] w-[400px]'>
           {/* Use the currentImageIndex for the dynamic image source */}
           <Image
             src={images[currentImageIndex]}
@@ -52,7 +60,33 @@ function GameInfo() {
             height={200}
             alt="Game Screenshot"
           />
+           
+
           </div>
+          <div className="md:mb-14 md:mr-10 md:mt-9">
+            <div className="flex items-center font-lemon-milk justify-between border-t border-b-2 border-dashed border-black py-1">
+              <div className="flex-1 text-center">
+                <h3>Height</h3>
+                <h3>6' 2"</h3>
+              </div>
+              <div className="border-l-2 border-dashed border-green-800 h-10"></div>
+              <div className="flex-1 text-center">
+                <h3>Weight</h3>
+                <h3>185 lbs</h3>
+              </div>
+            </div>
+            <div className="flex items-center font-lemon-milk justify-between border-b border-dotted border-black py-1">
+              <div className="flex-1 text-center">
+                <h3>Age</h3>
+                <h3>24</h3>
+              </div>
+              <div className="border-l border-dotted border-black h-8"></div>
+              <div className="flex-1 text-center">
+                <h3>Special Ability</h3>
+                <h3>?????</h3>
+              </div>
+            </div>
+         </div>
           <div className="flex mt-4">
             {/* Use the handlePrevImage and handleNextImage functions for button clicks */}
             <VscArrowCircleLeft
